@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form{
+    max-width: 370px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 200px;
+    padding: 15px;
+    background: #eee;
+    position: relative;
+}
+input.v:focus:valid{
+    box-shadow: 0 0 3px .6px #0f0;
+}
+input.v:focus:invalid{
+    box-shadow: 0 0 3px .6px #f00;
+}
+input{
+    box-shadow: none;
+    border: none;
+    width: 100%;
+}
+.btn-submit{
+    grid-column: 1 / 3;
+    margin-top: 30px;
+}
+.btn-submit input{
+    padding: 5px 0;
+}
+.text p{
+    padding: 5px;
+}
+.text p span{
+    color: #f00;
+    font-size: 14px;
+}
+.form-input, .text{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.form-input input{
+    padding: 5px;
+    box-shadow: 0 0 2px #666;
+    border-radius: 3px;
+}
+
+.btn-submit input{
+    cursor: pointer;
+    background: linear-gradient(#ccc, #999);
+    border-radius: 3px;
+    padding: 9px 0;
+}
+.invalid-msg{
+    height: 10px;
+    color: #f00;
+    position: absolute;
+    bottom: 64px;
+    width: 100%;
+}
+.invalid-msg:before{
+    display: none;
+}
+input.v:invalid:focus ~ .invalid-msg:before{
+    content: '* Обязательны для заполнения';
+    display: block;
+}
+input.v:valid:focus ~ .invalid-msg:before{
+    content: 'Success';
+    display: block;
+    color: green;
+    animation: voo 2s;
+}
+
+@keyframes voo{
+    0%{
+        content: 'Вооо ништяк!))))';
+        /*transform: translate(10px, 0);*/
+    }
+    90%{
+        font-size: 20px;
+        /*transform: translate(300px, 0);*/
+        content: 'ВАЧААААААААААЧ!))))';
+        font-weight: 700;
+    }
+}

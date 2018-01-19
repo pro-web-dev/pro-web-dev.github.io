@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 - Пример проверки достоверности ввода</title>
+</head>
+<body>
+    <!-- Кто такой фразой заканчивает разговор?)) -->
+    <!-- ..... так что..... -->
+    <form class="form">
+        <div class="text">
+            <p><span>*</span>Login</p>
+            <p><span>*</span>Password</p>
+            <p><span>*</span>Email</p>
+            <p><span>*</span>Phone</p>
+        </div>
+        <div class="form-input">
+            <input class="v" type="text"
+            name="login" required
+            pattern="[a-z]{1,5}"
+            title="Допустимы только английские буквы от 1 до 5"
+            placeholder="name">
+
+            <input class="v" type="password"
+            name="password" required
+            pattern="[0-9a-zа-я]{6,50}"
+            title="Пароль не менее 6 символов"
+            placeholder="password">
+
+            <input class="v" type="text"
+            name="emailAddress" required
+            pattern="[a-z0-9]{1,50}@[a-z]{2,4}[.][a-z]{2,4}" placeholder="email"
+            title="Введите с-ка) нормальный е-майл">
+
+            <input class="v" type="text"
+            required pattern="\d{3}-\d{2}-\d{2}"
+            title="Формат телефона 000-00-00"
+            name="emailAddress" placeholder="000-00-00">
+            <div class="invalid-msg"></div>
+        </div>
+
+        <div class="btn-submit"><input type="submit"></div>
+    </form>
+
+    <link rel="stylesheet" href="css/style.css">
+</body>
+</html>
