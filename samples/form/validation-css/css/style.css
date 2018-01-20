@@ -9,8 +9,7 @@
     grid-template-columns: 1fr 2fr;
     border: 1px solid #ccc;
     border-radius: 3px;
-    margin: auto;
-    margin-top: 200px;
+    margin: 25vh auto 0;
     padding: 15px;
     background: #eee;
     position: relative;
@@ -62,7 +61,6 @@ input{
     color: #f00;
     position: absolute;
     bottom: 64px;
-    width: 100%;
 }
 .invalid-msg:before{
     display: none;
@@ -81,11 +79,9 @@ input.v:valid:focus ~ .invalid-msg:before{
 @keyframes voo{
     0%{
         content: 'Вооо ништяк!))))';
-        /*transform: translate(10px, 0);*/
     }
     90%{
         font-size: 20px;
-        /*transform: translate(300px, 0);*/
         content: 'ВАЧААААААААААЧ!))))';
         font-weight: 700;
     }
