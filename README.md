@@ -2,4 +2,4 @@
 
 Мои работы.
 
-http://fuckomako.github.io/
+http://pro-web-dev.github.io
